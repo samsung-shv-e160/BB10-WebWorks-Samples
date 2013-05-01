@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0.0.0" id="sampleapp">
+ 
+  <author href="http://www.example.com/"
+          rim:copyright="Copyright 1998-2012 My Corp">My Corp</author>
+ 
+  <name>Sample application</name>
+ 
+  <description>
+    A sample application to demonstrate some features.
+  </description>
+ 
+  <rim:permissions>
+    <rim:permit>access_shared</rim:permit>
+    <rim:permit>access_location_services</rim:permit>
+    <rim:permit>use_camera</rim:permit> 
+  </rim:permissions>
+ 
+  <icon src="icons/icon-150.png"/>
+ 
+  <rim:splash src="splash-1280x768.png"/>
+  <rim:splash src="splash-768x1280.png"/>
+ 
+  <content src="index.html"/>
+ 
+  <feature id="blackberry.ui.dialog"/>
+   
+  <feature id="blackberry.app.orientation">
+    <param name="mode" value="portrait" />
+  </feature>
+ 
+  <feature id="blackberry.app">
+    <param name="backgroundColor" value="0xFFFF0000" />
+  </feature>
+ 
+  <access uri="http://www.somedomain.com" subdomains="true">
+    <feature id="blackberry.app" required="true" version="1.0.0"/>
+    <feature id="blackberry.invoke" required="true" version="1.0.0"/>
+  </access>
+ 
+  <license href="http://www.example.com/"/>
+ 
+</widget>
+BlackBerry PlayBook OS configuration document
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0.0.0">
+ 
+  <author href="http://www.example.com/"
+          rim:copyright="Copyright 1998-2012 My Corp">My Corp</author>
+ 
+  <name>Sample application</name>
+ 
+  <description>
+    A sample application to demonstrate some features.
+  </description>
+ 
+  <rim:orientation mode="auto"/>
+ 
+  <rim:loadingScreen backgroundImage="background.png"
+                     foregroundImage="foreground.gif"
+                     onLocalPageLoad="true">
+    <rim:transitionEffect type="zoomIn"/>
+  </rim:loadingScreen>
+         
+  <rim:category name="games"/>   
+ 
+  <rim:permissions>
+    <rim:permit>access_shared</rim:permit>
+    <rim:permit>read_geolocation</rim:permit>
+    <rim:permit>use_camera</rim:permit> 
+  </rim:permissions>
+ 
+  <icon src="icons/example.png"/>
+ 
+  <content src="index.html"/>
+ 
+  <feature id="blackberry.ui.dialog"/>
+ 
+  <access uri="http://www.somedomain.com" subdomains="true">
+    <feature id="blackberry.app.event"/>
+    <feature id="blackberry.invoke"/>
+  </access>
+ 
+</widget>
+BlackBerry 7 or earlier configuration document
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0"
+        rim:header="RIM-Widget: rim/widget">
+ 
+  <author href="http://www.example.com/"
+          rim:copyright="Copyright 1998-2012 My Corp">My Corp</author>
+ 
+  <rim:navigation mode="focus" />
+ 
+  <name>Sample application</name>
+ 
+  <description>
+    A sample application to demonstrate some features.
+  </description>
+ 
+  <rim:orientation mode="auto"/>
+ 
+  <rim:loadingScreen backgroundImage="background.png"
+                     foregroundImage="foreground.gif"
+                     onLocalPageLoad="true">
+    <rim:transitionEffect type="zoomIn" />
+  </rim:loadingScreen>
+ 
+  <icon src="icons/example.png"/>
+  <icon src="icons/boo.png" rim:hover="true"/>
+ 
+  <rim:cache maxCacheSizeTotal="2048" maxCacheSizeItem ="256" />
+ 
+  <content src="index.html" >
+    <rim:background src="listener.html" runOnStartup="true" />
+  </content>
+ 
+  <feature id="blackberry.ui.dialog"/>
+ 
+  <access uri="http://www.somedomain.com" subdomains="true">
+    <feature id="blackberry.pim.memo"/>
+    <feature id="blackberry.invoke.MemoArguments"/>
+  </access>
+ 
+  <rim:connection timeout="25000">
+    <id>TCP_WIFI</id>
+    <id>MDS</id>
+    <id>BIS-B</id>
+    <id>TCP_CELLULAR</id>
+    <id>WAP2</id>
+    <id>WAP</id>
+  </rim:connection>
+ 
+  <license>
+    Example license
+    Copyright (c) 2012 My Corp.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+    BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+    ACTION OF CONTRACT, INSULT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  </license>
+ 
+</widget>
